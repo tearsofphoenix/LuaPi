@@ -1,9 +1,12 @@
+#ROOT=/Users/Mac003/workspace/RPI/yagarto-4.7.2
+ROOT=/Users/veritas/Desktop/data/Workspace/yagarto-4.7.2
 ARCH = arm-none-eabi
-CC = ${ARCH}-gcc
-CPP = ${ARCH}-g++
-AS = ${ARCH}-as
-LD = ${ARCH}-ld
-AR = ${ARCH}-ar
+BIN = $(ROOT)/bin
+CC = $(BIN)/${ARCH}-gcc
+CPP = $(BIN)/${ARCH}-g++
+AS = $(BIN)/${ARCH}-as
+LD = $(BIN)/${ARCH}-ld
+AR = $(BIN)/${ARCH}-ar
 OBJCOPY = ${ARCH}-objcopy
 
 TOOLS_VERSION = $(shell $(CC) -dumpversion)
@@ -23,7 +26,6 @@ endif
 CFLAGS_FOR_TARGET = -mcpu=arm1176jzf-s
 ASFLAGS_FOR_TARGET = -mcpu=arm1176jzf-s
 LDFLAGS = -nostdlib -static --error-unresolved-symbols
-ROOT=/Users/Mac003/workspace/RPI/yagarto-4.7.2
 SYSLIBS = $(ROOT)/lib/gcc/$(ARCH)/$(TOOLS_VERSION)/libgcc.a
 NEWLIB_DIR = newlib/usr/$(ARCH)
 NEWLIB_LIBC = $(NEWLIB_DIR)/lib/libc.a 

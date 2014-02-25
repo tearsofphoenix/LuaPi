@@ -1,5 +1,6 @@
 #!/bin/bash
 # Oh how I hate bash.
+
 if [ -L $0 ] ; then
     ME=$(readlink $0)
 else
