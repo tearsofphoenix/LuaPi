@@ -31,9 +31,9 @@
 /* OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.           */
 
 #include <bsp/bsp.h>
-#include "chibi/eval.h"
 
 // Global evaluation context
+typedef void* sexp;
 sexp  __ctx;
 
 // Clock Tick handler, trigger preemption
@@ -44,10 +44,6 @@ sexp find_next_runnable_task();
 
 // C entry point, set up initial contexts
 void c_entry(void);
-
-// Entry point for a REPL loop
-void repl(sexp env);
-void lambda_sleep(sexp env);
 
 
 #endif /* end of include guard: LAMBDA_H */
