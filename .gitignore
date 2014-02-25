@@ -1,0 +1,10 @@
+*.o
+bin/kernel.map
+
+LuaPi/LuaPi.xcodeproj/
+
+*.xcuserstate
+
+LuaPi/LuaPi.xcodeproj/project.xcworkspace
+
+LuaPi/LuaPi.xcodeproj/project.xcworkspace/xcuserdata
