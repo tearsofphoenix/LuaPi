@@ -16,10 +16,10 @@ PLATFORM = qemu
 endif
 
 ifdef RELEASE
-CFLAGS = -O3 -std=gnu99 -Werror -DPLATFORM=$(PLATFORM) -DRASPBERRY_PI
+CFLAGS = -O3 -std=gnu99 -DPLATFORM=$(PLATFORM) -DRASPBERRY_PI -fno-builtin
 ASFLAGS =
 else
-CFLAGS = -O0 -g -std=gnu99 -Werror -DPLATFORM=$(PLATFORM) -DRASPBERRY_PI
+CFLAGS = -O0 -g -std=gnu99 -DPLATFORM=$(PLATFORM) -DRASPBERRY_PI -fno-builtin
 ASFLAGS = -g
 endif
 

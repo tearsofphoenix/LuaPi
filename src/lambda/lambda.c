@@ -29,17 +29,17 @@
 
 #include "lambda.h"
 
-#define LAMBDA_PI_REPL_PRIORITY 0
-sexp ctx __attribute__ (( aligned (4) ));
 sexp __current_task __attribute__ (( aligned (4) ));
 sexp __next_task __attribute__ (( aligned (4) ));
-sexp __task_priority_vector[33] __attribute__ (( aligned (4) ));
 
-void c_entry() { 
-  platform_startup();
-  init_syscalls();
-  pl011_init();
-
+void c_entry()
+{
+    platform_startup();
+    init_syscalls();
+    pl011_init();
+    
+    const char *str = "helloworld!";
+    pl011_puts((uint8_t *)str, strlen(str));
 }
 
 void tick(void)

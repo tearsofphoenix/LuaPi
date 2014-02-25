@@ -34,7 +34,6 @@
 
 // Global evaluation context
 typedef void* sexp;
-sexp  __ctx;
 
 // Clock Tick handler, trigger preemption
 void tick(void);
